@@ -8,7 +8,7 @@ module Slugify
     module ClassMethods
 
         def find_by_slug(slug)
-            self.all.find{|name| name.slug == slug}
+            self.all.detect {|name| name.slug == slug}
         end
 
 
